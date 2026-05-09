@@ -1,0 +1,713 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <!-- ==========================================
+       Pablo Miranda Juanes — Portfolio CV
+       Versión: 1.0
+       ========================================== -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- SEO básico -->
+  <title>Pablo Miranda Juanes | PMO & Data Analyst</title>
+  <meta name="description" content="Portfolio profesional de Pablo Miranda Juanes, Ingeniero de Organización Industrial especializado en Gestión de Proyectos y Business Intelligence." />
+  <meta name="keywords" content="Pablo Miranda Juanes, PMO, Business Intelligence, Data Analysis, Gestión de Proyectos, Power BI, Python" />
+  <meta name="author" content="Pablo Miranda Juanes" />
+
+  <!-- Open Graph / redes sociales -->
+  <meta property="og:title" content="Pablo Miranda Juanes | PMO & Data Analyst" />
+  <meta property="og:description" content="Portfolio profesional — Gestión de Proyectos & Business Intelligence" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://pablomirandajuanes.github.io" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Pablo Miranda Juanes | PMO & Data Analyst" />
+
+  <!-- Favicon inline SVG -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%230ea5e9'/><text y='.9em' font-size='65' x='12' fill='white' font-family='serif' font-weight='bold'>P</text></svg>" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Inter:wght@300;400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ==========================================
+       LOADER DE ENTRADA
+  ========================================== -->
+  <div id="loader" aria-hidden="true">
+    <div class="loader-inner">
+      <div class="loader-logo">PMJ</div>
+      <div class="loader-bar"><div class="loader-fill"></div></div>
+    </div>
+  </div>
+
+  <!-- ==========================================
+       CURSOR PERSONALIZADO
+  ========================================== -->
+  <div id="cursor" aria-hidden="true"></div>
+  <div id="cursor-follower" aria-hidden="true"></div>
+
+  <!-- ==========================================
+       NAVEGACIÓN
+  ========================================== -->
+  <nav id="navbar" role="navigation" aria-label="Navegación principal">
+    <div class="nav-brand">
+      <span class="brand-dot"></span>PMJ
+    </div>
+    <ul class="nav-links" role="list">
+      <li><a href="#sobre-mi">Sobre mí</a></li>
+      <li><a href="#experiencia">Experiencia</a></li>
+      <li><a href="#educacion">Educación</a></li>
+      <li><a href="#habilidades">Skills</a></li>
+      <li><a href="#proyectos">Proyectos</a></li>
+      <li><a href="#contacto" class="nav-cta">Contactar</a></li>
+    </ul>
+    <button class="hamburger" id="hamburger" aria-label="Abrir menú" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- Menú móvil -->
+  <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+    <ul role="list">
+      <li><a href="#sobre-mi" class="mobile-link">Sobre mí</a></li>
+      <li><a href="#experiencia" class="mobile-link">Experiencia</a></li>
+      <li><a href="#educacion" class="mobile-link">Educación</a></li>
+      <li><a href="#habilidades" class="mobile-link">Skills</a></li>
+      <li><a href="#proyectos" class="mobile-link">Proyectos</a></li>
+      <li><a href="#contacto" class="mobile-link">Contactar</a></li>
+    </ul>
+  </div>
+
+  <!-- ==========================================
+       MAIN
+  ========================================== -->
+  <main>
+
+    <!-- ========== SECCIÓN 1: HERO ========== -->
+    <section id="hero" aria-label="Presentación">
+      <!-- Fondo animado -->
+      <div class="hero-bg" aria-hidden="true">
+        <div class="orb orb-1"></div>
+        <div class="orb orb-2"></div>
+        <div class="orb orb-3"></div>
+        <div class="grid-lines"></div>
+      </div>
+
+      <div class="hero-content">
+        <!-- Foto de perfil -->
+        <div class="hero-photo-wrapper" data-reveal>
+          <div class="hero-photo">
+            <!-- Reemplaza el src con tu foto real -->
+            <div class="photo-placeholder" aria-label="Foto de Pablo Miranda Juanes">
+              <span>PMJ</span>
+            </div>
+          </div>
+          <div class="photo-ring"></div>
+          <div class="photo-status">
+            <span class="status-dot"></span>Disponible
+          </div>
+        </div>
+
+        <!-- Texto principal -->
+        <div class="hero-text">
+          <p class="hero-eyebrow" data-reveal>Bienvenido a mi portfolio</p>
+          <h1 class="hero-name" data-reveal>
+            Pablo<br />
+            <span class="name-accent">Miranda</span><br />
+            Juanes
+          </h1>
+          <p class="hero-role" data-reveal>
+            <span class="role-tag">PMO</span>
+            <span class="role-sep">·</span>
+            <span class="role-tag">Data Analyst</span>
+            <span class="role-sep">·</span>
+            <span class="role-tag">Business Intelligence</span>
+          </p>
+          <p class="hero-desc" data-reveal>
+            Ingeniero de Organización Industrial con experiencia en gestión de proyectos de gran escala y análisis de datos para la toma de decisiones. Especializado en sostenibilidad y BI.
+          </p>
+
+          <!-- Botones de acción -->
+          <div class="hero-actions" data-reveal>
+            <!-- Reemplaza href con la URL de tu CV en PDF -->
+            <a href="#" class="btn btn-primary" download aria-label="Descargar CV en PDF">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+              Descargar CV
+            </a>
+            <a href="#contacto" class="btn btn-ghost">
+              Contactar
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </a>
+          </div>
+
+          <!-- Iconos sociales -->
+          <div class="hero-social" data-reveal>
+            <!-- Reemplaza # con tu URL de LinkedIn -->
+            <a href="#" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="LinkedIn">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+              LinkedIn
+            </a>
+            <!-- Reemplaza # con tu URL de GitHub -->
+            <a href="#" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="GitHub">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"/></svg>
+              GitHub
+            </a>
+            <a href="mailto:pablomirandajuanes@gmail.com" class="social-link" aria-label="Email">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              Email
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Scroll indicator -->
+      <div class="scroll-indicator" aria-hidden="true">
+        <span>Scroll</span>
+        <div class="scroll-line"></div>
+      </div>
+    </section>
+
+    <!-- ========== SECCIÓN 2: SOBRE MÍ ========== -->
+    <section id="sobre-mi" aria-labelledby="sobre-mi-title">
+      <div class="container">
+        <div class="section-header" data-reveal>
+          <span class="section-tag">01 / Sobre mí</span>
+          <h2 id="sobre-mi-title" class="section-title">Quién soy</h2>
+        </div>
+
+        <div class="about-grid">
+          <!-- Descripción -->
+          <div class="about-text" data-reveal>
+            <p class="about-lead">
+              Soy un <strong>Ingeniero de Organización Industrial</strong> con sólida experiencia en gestión de proyectos de infraestructura eléctrica y en el desarrollo de soluciones de Business Intelligence aplicadas a la sostenibilidad.
+            </p>
+            <p>
+              Actualmente trabajo como Associate en <strong>Nfq Advisory</strong>, ayudando a entidades financieras a cuantificar su huella de carbono y alinear sus portfolios de inversión con los objetivos del Acuerdo de París. Anteriormente lideré como PMO la gestión de más de 25 proyectos para Red Eléctrica Española, con un valor total superior a 30 millones de euros.
+            </p>
+            <p>
+              Compagino mi carrera profesional con un <strong>Máster en Business Intelligence y Data Analysis</strong>, enfocado en convertir datos en decisiones estratégicas.
+            </p>
+          </div>
+
+          <!-- Cards de fortalezas -->
+          <div class="about-cards">
+            <div class="strength-card glass" data-reveal>
+              <div class="strength-icon">🎯</div>
+              <h3>Orientación a resultados</h3>
+              <p>Gestión de proyectos de alto valor con foco en entrega a tiempo y control presupuestario.</p>
+            </div>
+            <div class="strength-card glass" data-reveal>
+              <div class="strength-icon">📊</div>
+              <h3>Decisiones basadas en datos</h3>
+              <p>Transformo datos complejos en insights accionables usando Python, R y Power BI.</p>
+            </div>
+            <div class="strength-card glass" data-reveal>
+              <div class="strength-icon">♻️</div>
+              <h3>Sostenibilidad</h3>
+              <p>Especialización en descarbonización financiera y alineación con el Acuerdo de París.</p>
+            </div>
+            <div class="strength-card glass" data-reveal>
+              <div class="strength-icon">🤝</div>
+              <h3>Coordinación transversal</h3>
+              <p>Experiencia liderando equipos multidisciplinares de ingeniería, finanzas y operaciones.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Estadísticas rápidas -->
+        <div class="stats-row" data-reveal>
+          <div class="stat-item">
+            <span class="stat-num" data-count="25">0</span><span class="stat-plus">+</span>
+            <p>Proyectos gestionados</p>
+          </div>
+          <div class="stat-item">
+            <span class="stat-num" data-count="30">0</span><span class="stat-plus">M€</span>
+            <p>Valor de portfolio</p>
+          </div>
+          <div class="stat-item">
+            <span class="stat-num" data-count="3">0</span>
+            <p>Años de experiencia</p>
+          </div>
+          <div class="stat-item">
+            <span class="stat-num" data-count="150">0</span><span class="stat-plus">+</span>
+            <p>Partidos disputados</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== SECCIÓN 3: EXPERIENCIA ========== -->
+    <section id="experiencia" aria-labelledby="exp-title">
+      <div class="container">
+        <div class="section-header" data-reveal>
+          <span class="section-tag">02 / Experiencia</span>
+          <h2 id="exp-title" class="section-title">Trayectoria profesional</h2>
+        </div>
+
+        <div class="timeline">
+
+          <!-- Item 1 -->
+          <div class="timeline-item" data-reveal>
+            <div class="timeline-marker">
+              <div class="marker-dot active"></div>
+              <div class="marker-line"></div>
+            </div>
+            <div class="timeline-card glass">
+              <div class="tl-header">
+                <div>
+                  <span class="tl-period">Sep 2025 — Actualidad</span>
+                  <h3 class="tl-role">Associate</h3>
+                  <p class="tl-company">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v16"/></svg>
+                    Nfq Advisory, Solutions, Outsourcing · Madrid
+                  </p>
+                </div>
+                <span class="tl-badge active-badge">Actual</span>
+              </div>
+              <ul class="tl-achievements">
+                <li>Apoyo a entidades financieras en la cuantificación de su huella de carbono y desarrollo de hojas de ruta para la neutralidad climática.</li>
+                <li>Desarrollo de una aplicación para alinear portafolios de inversión bancaria con los estándares globales de reducción de emisiones GEI y los objetivos del Acuerdo de París.</li>
+              </ul>
+              <div class="tl-tags">
+                <span class="tag">Sostenibilidad</span>
+                <span class="tag">ESG</span>
+                <span class="tag">Finanzas Climáticas</span>
+                <span class="tag">Acuerdo de París</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 2 -->
+          <div class="timeline-item" data-reveal>
+            <div class="timeline-marker">
+              <div class="marker-dot"></div>
+              <div class="marker-line"></div>
+            </div>
+            <div class="timeline-card glass">
+              <div class="tl-header">
+                <div>
+                  <span class="tl-period">Jun 2024 — Jul 2025</span>
+                  <h3 class="tl-role">PMO (Project Management Officer)</h3>
+                  <p class="tl-company">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v16"/></svg>
+                    Red Eléctrica Española (REE) · Oviedo
+                  </p>
+                </div>
+                <span class="tl-badge">+30M€</span>
+              </div>
+              <ul class="tl-achievements">
+                <li>Gestión de más de <strong>25 proyectos</strong> de modificación y ampliación de líneas de transmisión eléctrica en toda España.</li>
+                <li>Coordinación transversal con equipos de ingeniería, operaciones, finanzas y partes interesadas externas.</li>
+                <li>Liderazgo en planificación, programación, presupuestación y evaluación de riesgos.</li>
+              </ul>
+              <div class="tl-tags">
+                <span class="tag">PMO</span>
+                <span class="tag">Primavera P6</span>
+                <span class="tag">Gestión de Riesgos</span>
+                <span class="tag">Infraestructura</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 3 -->
+          <div class="timeline-item" data-reveal>
+            <div class="timeline-marker">
+              <div class="marker-dot"></div>
+            </div>
+            <div class="timeline-card glass">
+              <div class="tl-header">
+                <div>
+                  <span class="tl-period">Nov 2023 — May 2024</span>
+                  <h3 class="tl-role">Becario — Gestión de Proyectos Fotovoltaicos</h3>
+                  <p class="tl-company">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v16"/></svg>
+                    EDP · Oviedo
+                  </p>
+                </div>
+              </div>
+              <ul class="tl-achievements">
+                <li>Gestión y reporte en el departamento de proyectos fotovoltaicos.</li>
+                <li>Seguimiento y control de activos del portfolio de energía renovable.</li>
+              </ul>
+              <div class="tl-tags">
+                <span class="tag">Energía Renovable</span>
+                <span class="tag">Reporting</span>
+                <span class="tag">Control de Activos</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== SECCIÓN 4: EDUCACIÓN ========== -->
+    <section id="educacion" aria-labelledby="edu-title">
+      <div class="container">
+        <div class="section-header" data-reveal>
+          <span class="section-tag">03 / Educación</span>
+          <h2 id="edu-title" class="section-title">Formación</h2>
+        </div>
+
+        <div class="edu-grid">
+
+          <div class="edu-card glass" data-reveal>
+            <div class="edu-icon">🎓</div>
+            <div class="edu-body">
+              <span class="edu-period">Ene 2025 — Actualidad</span>
+              <h3>Máster en Business Intelligence y Data Analysis</h3>
+              <p class="edu-school">Universidad de La Rioja · UNIR</p>
+              <ul class="edu-highlights">
+                <li>Visualización de datos: Tableau, Power BI</li>
+                <li>Modelos de predicción: R Studio, Python</li>
+                <li>BI aplicado a gestión de proyectos</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="edu-card glass" data-reveal>
+            <div class="edu-icon">⚙️</div>
+            <div class="edu-body">
+              <span class="edu-period">2019 — 2024</span>
+              <h3>Grado en Ingeniería de Organización Industrial</h3>
+              <p class="edu-school">Escuela Politécnica · Universidad de Oviedo</p>
+              <ul class="edu-highlights">
+                <li>Nota media: 7,31 / 10</li>
+                <li>Especialización en Gestión de Proyectos</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="edu-card glass cert-card" data-reveal>
+            <div class="edu-icon">📜</div>
+            <div class="edu-body">
+              <span class="edu-period">Certificaciones</span>
+              <h3>Cursos y Certificados</h3>
+              <ul class="edu-highlights">
+                <li><strong>Cambridge B2</strong> — First Certificate in English</li>
+                <li><strong>Power BI avanzado</strong> — 30 horas</li>
+                <li><strong>Carnet de conducir</strong> — Tipo B</li>
+              </ul>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== SECCIÓN 5: HABILIDADES ========== -->
+    <section id="habilidades" aria-labelledby="skills-title">
+      <div class="container">
+        <div class="section-header" data-reveal>
+          <span class="section-tag">04 / Skills</span>
+          <h2 id="skills-title" class="section-title">Habilidades</h2>
+        </div>
+
+        <div class="skills-grid">
+
+          <!-- Data & BI -->
+          <div class="skills-group glass" data-reveal>
+            <h3 class="skills-group-title">
+              <span class="skills-icon">📊</span>Data & BI
+            </h3>
+            <div class="skill-bars">
+              <div class="skill-bar-item">
+                <div class="skill-bar-header"><span>Power BI</span><span class="skill-pct">90%</span></div>
+                <div class="skill-bar-bg"><div class="skill-bar-fill" data-width="90"></div></div>
+              </div>
+              <div class="skill-bar-item">
+                <div class="skill-bar-header"><span>Python</span><span class="skill-pct">85%</span></div>
+                <div class="skill-bar-bg"><div class="skill-bar-fill" data-width="85"></div></div>
+              </div>
+              <div class="skill-bar-item">
+                <div class="skill-bar-header"><span>R / R Studio</span><span class="skill-pct">80%</span></div>
+                <div class="skill-bar-bg"><div class="skill-bar-fill" data-width="80"></div></div>
+              </div>
+              <div class="skill-bar-item">
+                <div class="skill-bar-header"><span>SQL</span><span class="skill-pct">80%</span></div>
+                <div class="skill-bar-bg"><div class="skill-bar-fill" data-width="80"></div></div>
+              </div>
+              <div class="skill-bar-item">
+                <div class="skill-bar-header"><span>Tableau</span><span class="skill-pct">75%</span></div>
+                <div class="skill-bar-bg"><div class="skill-bar-fill" data-width="75"></div></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Gestión -->
+          <div class="skills-group glass" data-reveal>
+            <h3 class="skills-group-title">
+              <span class="skills-icon">🗂️</span>Gestión de Proyectos
+            </h3>
+            <div class="skill-bars">
+              <div class="skill-bar-item">
+                <div class="skill-bar-header"><span>Primavera P6</span><span class="skill-pct">85%</span></div>
+                <div class="skill-bar-bg"><div class="skill-bar-fill" data-width="85"></div></div>
+              </div>
+              <div class="skill-bar-item">
+                <div class="skill-bar-header"><span>Microsoft Project</span><span class="skill-pct">85%</span></div>
+                <div class="skill-bar-bg"><div class="skill-bar-fill" data-width="85"></div></div>
+              </div>
+              <div class="skill-bar-item">
+                <div class="skill-bar-header"><span>Excel Avanzado</span><span class="skill-pct">90%</span></div>
+                <div class="skill-bar-bg"><div class="skill-bar-fill" data-width="90"></div></div>
+              </div>
+              <div class="skill-bar-item">
+                <div class="skill-bar-header"><span>Control Presupuestario</span><span class="skill-pct">88%</span></div>
+                <div class="skill-bar-bg"><div class="skill-bar-fill" data-width="88"></div></div>
+              </div>
+              <div class="skill-bar-item">
+                <div class="skill-bar-header"><span>Gestión de Riesgos</span><span class="skill-pct">82%</span></div>
+                <div class="skill-bar-bg"><div class="skill-bar-fill" data-width="82"></div></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Idiomas -->
+          <div class="skills-group glass" data-reveal>
+            <h3 class="skills-group-title">
+              <span class="skills-icon">🌍</span>Idiomas
+            </h3>
+            <div class="lang-cards">
+              <div class="lang-card">
+                <div class="lang-flag">🇪🇸</div>
+                <div class="lang-info">
+                  <strong>Castellano</strong>
+                  <span>Nativo</span>
+                </div>
+                <div class="lang-level-dots">
+                  <span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span>
+                </div>
+              </div>
+              <div class="lang-card">
+                <div class="lang-flag">🇬🇧</div>
+                <div class="lang-info">
+                  <strong>Inglés</strong>
+                  <span>B2 Cambridge</span>
+                </div>
+                <div class="lang-level-dots">
+                  <span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot"></span>
+                </div>
+              </div>
+              <div class="lang-card">
+                <div class="lang-flag">🇩🇪</div>
+                <div class="lang-info">
+                  <strong>Alemán</strong>
+                  <span>Básico</span>
+                </div>
+                <div class="lang-level-dots">
+                  <span class="dot filled"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Soft Skills -->
+          <div class="skills-group glass" data-reveal>
+            <h3 class="skills-group-title">
+              <span class="skills-icon">✨</span>Soft Skills
+            </h3>
+            <div class="soft-skills">
+              <span class="soft-tag">Liderazgo</span>
+              <span class="soft-tag">Comunicación</span>
+              <span class="soft-tag">Trabajo en equipo</span>
+              <span class="soft-tag">Resolución de problemas</span>
+              <span class="soft-tag">Orientación a resultados</span>
+              <span class="soft-tag">Adaptabilidad</span>
+              <span class="soft-tag">Coordinación transversal</span>
+              <span class="soft-tag">Pensamiento analítico</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== SECCIÓN 6: PROYECTOS ========== -->
+    <section id="proyectos" aria-labelledby="proj-title">
+      <div class="container">
+        <div class="section-header" data-reveal>
+          <span class="section-tag">05 / Proyectos</span>
+          <h2 id="proj-title" class="section-title">Proyectos destacados</h2>
+        </div>
+
+        <div class="projects-grid">
+
+          <!-- Proyecto 1 -->
+          <article class="project-card glass" data-reveal>
+            <div class="project-preview" style="background: linear-gradient(135deg, #0ea5e9 0%, #0284c7 100%);">
+              <div class="project-preview-icon">♻️</div>
+            </div>
+            <div class="project-body">
+              <div class="project-meta">
+                <span class="project-year">2025</span>
+                <span class="project-type">BI · Sostenibilidad</span>
+              </div>
+              <h3>Herramienta de Huella de Carbono</h3>
+              <p>Aplicación para cuantificar la huella de carbono de portfolios bancarios y generar hojas de ruta hacia la neutralidad climática, alineada con los objetivos del Acuerdo de París.</p>
+              <div class="project-tech">
+                <span>Python</span><span>Power BI</span><span>ESG Data</span><span>Finanzas Climáticas</span>
+              </div>
+              <div class="project-actions">
+                <!-- Reemplaza # con el enlace real al proyecto -->
+                <a href="#" class="btn-project">Ver detalles →</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Proyecto 2 -->
+          <article class="project-card glass" data-reveal>
+            <div class="project-preview" style="background: linear-gradient(135deg, #8b5cf6 0%, #6d28d9 100%);">
+              <div class="project-preview-icon">⚡</div>
+            </div>
+            <div class="project-body">
+              <div class="project-meta">
+                <span class="project-year">2024</span>
+                <span class="project-type">PMO · Energía</span>
+              </div>
+              <h3>Gestión de Proyectos REE</h3>
+              <p>Supervisión y coordinación de más de 25 proyectos de transmisión eléctrica en toda España, implementando metodologías PMO para garantizar entrega en plazo y presupuesto.</p>
+              <div class="project-tech">
+                <span>Primavera P6</span><span>MS Project</span><span>Excel</span><span>Risk Mgmt</span>
+              </div>
+              <div class="project-actions">
+                <a href="#" class="btn-project">Ver detalles →</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Proyecto 3 -->
+          <article class="project-card glass" data-reveal>
+            <div class="project-preview" style="background: linear-gradient(135deg, #10b981 0%, #047857 100%);">
+              <div class="project-preview-icon">📊</div>
+            </div>
+            <div class="project-body">
+              <div class="project-meta">
+                <span class="project-year">2025</span>
+                <span class="project-type">Data Analysis</span>
+              </div>
+              <h3>Dashboard BI para Proyectos</h3>
+              <p>Cuadro de mando interactivo en Power BI que centraliza KPIs de gestión de proyectos, permitiendo seguimiento en tiempo real de presupuesto, plazos y riesgos.</p>
+              <div class="project-tech">
+                <span>Power BI</span><span>DAX</span><span>SQL</span><span>ETL</span>
+              </div>
+              <div class="project-actions">
+                <a href="#" class="btn-project">Ver detalles →</a>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== SECCIÓN 7: CONTACTO ========== -->
+    <section id="contacto" aria-labelledby="contact-title">
+      <div class="container">
+        <div class="section-header" data-reveal>
+          <span class="section-tag">06 / Contacto</span>
+          <h2 id="contact-title" class="section-title">Hablemos</h2>
+        </div>
+
+        <div class="contact-grid">
+
+          <!-- Info -->
+          <div class="contact-info" data-reveal>
+            <p class="contact-lead">
+              ¿Tienes un proyecto interesante o una oportunidad profesional?<br>
+              Estaré encantado de conectar.
+            </p>
+            <div class="contact-details">
+              <a href="mailto:pablomirandajuanes@gmail.com" class="contact-detail glass">
+                <div class="contact-detail-icon">✉️</div>
+                <div>
+                  <span>Email</span>
+                  <strong>pablomirandajuanes@gmail.com</strong>
+                </div>
+              </a>
+              <a href="tel:+34688916364" class="contact-detail glass">
+                <div class="contact-detail-icon">📱</div>
+                <div>
+                  <span>Teléfono</span>
+                  <strong>+34 688 916 364</strong>
+                </div>
+              </a>
+              <div class="contact-detail glass">
+                <div class="contact-detail-icon">📍</div>
+                <div>
+                  <span>Ubicación</span>
+                  <strong>Madrid, España</strong>
+                </div>
+              </div>
+            </div>
+            <div class="contact-social">
+              <a href="#" target="_blank" rel="noopener noreferrer" class="contact-social-btn glass" aria-label="LinkedIn">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+                LinkedIn
+              </a>
+              <a href="#" target="_blank" rel="noopener noreferrer" class="contact-social-btn glass" aria-label="GitHub">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"/></svg>
+                GitHub
+              </a>
+            </div>
+          </div>
+
+          <!-- Formulario -->
+          <div class="contact-form-wrapper" data-reveal>
+            <form id="contactForm" class="contact-form glass" novalidate>
+              <div class="form-group">
+                <label for="name">Nombre</label>
+                <input type="text" id="name" name="name" placeholder="Tu nombre" required autocomplete="name" />
+              </div>
+              <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="tu@email.com" required autocomplete="email" />
+              </div>
+              <div class="form-group">
+                <label for="subject">Asunto</label>
+                <input type="text" id="subject" name="subject" placeholder="¿De qué quieres hablar?" required />
+              </div>
+              <div class="form-group">
+                <label for="message">Mensaje</label>
+                <textarea id="message" name="message" rows="5" placeholder="Cuéntame sobre tu proyecto o propuesta..." required></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary btn-full" id="submitBtn">
+                <span class="btn-text">Enviar mensaje</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+              </button>
+              <p class="form-note">
+                💡 El formulario abre tu cliente de correo. Para integración completa, conecta con <a href="https://formspree.io" target="_blank" rel="noopener">Formspree</a> o <a href="https://web3forms.com" target="_blank" rel="noopener">Web3Forms</a>.
+              </p>
+            </form>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ==========================================
+       FOOTER
+  ========================================== -->
+  <footer>
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-brand">PMJ</div>
+        <p class="footer-copy">© 2026 Pablo Miranda Juanes. Hecho con ❤️ y mucho café.</p>
+        <button class="back-to-top" id="backToTop" aria-label="Volver arriba">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="18 15 12 9 6 15"/></svg>
+        </button>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
