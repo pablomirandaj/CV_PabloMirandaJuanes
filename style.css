@@ -1,7 +1,7 @@
 /* ============================================================
    Pablo Miranda Juanes — Premium Portfolio
    Design: Deep obsidian · Fraunces + Outfit + JetBrains Mono
-   v2.0 — Production-grade, mobile-first, Lighthouse 90+
+   v2.1 — Production-grade, mobile-first, Lighthouse 90+
    ============================================================ */
 
 /* ── Reset & Base ── */
@@ -151,8 +151,10 @@ body {
   transform: scaleX(0); transform-origin: right;
   transition: transform 0.25s var(--easing);
 }
-.nav-links a:hover { color: var(--white); }
-.nav-links a:hover::after { transform: scaleX(1); transform-origin: left; }
+.nav-links a:hover,
+.nav-links a.active { color: var(--white); }
+.nav-links a:hover::after,
+.nav-links a.active::after { transform: scaleX(1); transform-origin: left; }
 .nav-cta {
   font-size: 0.72rem; letter-spacing: 0.1em; text-transform: uppercase; font-weight: 500;
   color: var(--gold); text-decoration: none;
@@ -533,7 +535,6 @@ body {
 .am-link { text-decoration: none; color: var(--text); transition: color 0.2s; }
 .am-link:hover { color: var(--gold); }
 
-
 /* Strengths */
 .strengths {
   display: grid; grid-template-columns: 1fr 1fr; gap: 1px;
@@ -608,9 +609,38 @@ body {
 }
 .xp-co {
   font-size: 0.76rem; color: var(--gold); margin-bottom: 0.85rem; font-weight: 400;
-  display: flex; align-items: center; gap: 0.3rem;
+  display: flex; align-items: center; gap: 0.5rem;
 }
-.xp-co .ti { font-size: 0.8rem; flex-shrink: 0; }
+
+/* ── ✅ NUEVO: Logos de empresa en la línea de tiempo ── */
+.xp-logo {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 22px; height: 22px; border-radius: 5px;
+  font-family: 'JetBrains Mono', monospace; font-size: 0.6rem; font-weight: 400;
+  flex-shrink: 0; letter-spacing: 0;
+  border: 1px solid var(--border-2);
+}
+.xp-logo-minsait {
+  background: rgba(0,100,210,0.12);
+  border-color: rgba(0,100,210,0.25);
+  color: #5fa8f5;
+}
+.xp-logo-nfq {
+  background: rgba(92,196,160,0.1);
+  border-color: rgba(92,196,160,0.2);
+  color: var(--teal);
+}
+.xp-logo-ntt {
+  background: rgba(200,100,60,0.1);
+  border-color: rgba(200,100,60,0.2);
+  color: #e08060;
+}
+.xp-logo-edp {
+  background: rgba(200,168,106,0.1);
+  border-color: rgba(200,168,106,0.2);
+  color: var(--gold);
+}
+
 .xp-ul { list-style: none; margin-bottom: 0.85rem; }
 .xp-ul li {
   font-size: 0.83rem; color: var(--text);
@@ -667,6 +697,7 @@ body {
 }
 .skb-alt .skb-fill { background: linear-gradient(90deg, var(--teal), #7dd8ca); }
 
+/* ── ✅ BANDERAS: font-size explícito garantiza visibilidad en todos los navegadores ── */
 .langs { display: flex; flex-direction: column; gap: 0.65rem; }
 .lang {
   display: flex; align-items: center; gap: 0.75rem;
@@ -674,19 +705,18 @@ body {
   transition: border-color 0.2s, background 0.2s;
 }
 .lang:hover { border-color: var(--border-2); background: var(--surface); }
-.pj-icon-gold { color: #c8a86a; border-color: rgba(200,168,106,0.25); background: rgba(200,168,106,0.08); }
-.pj-icon-green { color: #5cc4a0; border-color: rgba(92,196,160,0.25); background: rgba(92,196,160,0.08); }
-.pj-icon-blue  { color: #6aabdc; border-color: rgba(106,171,220,0.25); background: rgba(106,171,220,0.08); }
-.pj:hover .pj-icon-gold  { box-shadow: 0 0 20px rgba(200,168,106,0.2); }
-.pj:hover .pj-icon-green { box-shadow: 0 0 20px rgba(92,196,160,0.2); }
-.pj:hover .pj-icon-blue  { box-shadow: 0 0 20px rgba(106,171,220,0.2); }
 
 .lang-flag {
-  width: 28px; height: 28px; border-radius: 50%;
+  width: 32px; height: 32px; border-radius: 50%;
   display: flex; align-items: center; justify-content: center;
-  font-size: 1.35rem; flex-shrink: 0;
+  font-size: 1.5rem;    /* ← clave: tamaño explícito */
   line-height: 1;
+  flex-shrink: 0;
+  overflow: hidden;
+  /* Asegura render correcto en Safari/Firefox */
+  font-family: "Apple Color Emoji", "Segoe UI Emoji", "Noto Color Emoji", sans-serif;
 }
+
 .lang-info { flex: 1; }
 .lang-info strong {
   display: block; font-size: 0.8rem; color: var(--white); font-weight: 400;
@@ -740,6 +770,12 @@ body {
   box-shadow: 0 0 20px rgba(200,168,106,0.15);
 }
 .pj-cover-icon .ti { font-size: 1.4rem; }
+.pj-icon-gold { color: #c8a86a; border-color: rgba(200,168,106,0.25); background: rgba(200,168,106,0.08); }
+.pj-icon-green { color: #5cc4a0; border-color: rgba(92,196,160,0.25); background: rgba(92,196,160,0.08); }
+.pj-icon-blue  { color: #6aabdc; border-color: rgba(106,171,220,0.25); background: rgba(106,171,220,0.08); }
+.pj:hover .pj-icon-gold  { box-shadow: 0 0 20px rgba(200,168,106,0.2); }
+.pj:hover .pj-icon-green { box-shadow: 0 0 20px rgba(92,196,160,0.2); }
+.pj:hover .pj-icon-blue  { box-shadow: 0 0 20px rgba(106,171,220,0.2); }
 .pj-yr {
   position: absolute; bottom: 0.75rem; right: 0.75rem;
   font-family: 'JetBrains Mono', monospace; font-size: 0.6rem;
