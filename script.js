@@ -297,6 +297,14 @@ function showToast(msg, type = 'ok') {
 }
 
 /* ════════════════════════════════════════════════════════════
+   FOOTER YEAR
+   ════════════════════════════════════════════════════════════ */
+(function initFooterYear() {
+  const el = $('ftYear');
+  if (el) el.textContent = new Date().getFullYear();
+})();
+
+/* ════════════════════════════════════════════════════════════
    BACK TO TOP
    ════════════════════════════════════════════════════════════ */
 (function initBackToTop() {

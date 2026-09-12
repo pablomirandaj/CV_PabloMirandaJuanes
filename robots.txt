@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://pablomirandaj.github.io/CV_PabloMirandaJuanes/sitemap.xml

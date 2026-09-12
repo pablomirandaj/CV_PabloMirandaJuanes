@@ -738,6 +738,65 @@ body {
 .edu-d { color: var(--white-2); font-weight: 400; line-height: 1.35; font-size: 0.8rem; }
 .edu-s { color: var(--text-2); font-size: 0.72rem; margin-top: 0.1rem; }
 
+/* ════════════ EDUCATION SECTION ════════════ */
+.edu-grid {
+  display: grid; grid-template-columns: 1.4fr 1fr;
+  gap: clamp(2.5rem, 6vw, 5rem); align-items: start;
+}
+.edu-cards { display: flex; flex-direction: column; gap: 1.1rem; }
+.edu-card {
+  border: 1px solid var(--border); border-radius: var(--r-lg);
+  background: var(--surface); padding: 1.4rem 1.5rem;
+  transition: border-color 0.2s, background 0.2s;
+}
+.edu-card:hover { border-color: var(--border-2); background: var(--bg-card); }
+.edu-card-top { margin-bottom: 0.6rem; }
+.edu-badge {
+  font-family: 'JetBrains Mono', monospace; font-size: 0.6rem;
+  letter-spacing: 0.08em; text-transform: uppercase;
+  color: var(--text-2); border: 1px solid var(--border-2);
+  padding: 0.2rem 0.55rem; border-radius: 3px;
+}
+.edu-badge.current {
+  color: var(--teal); border-color: rgba(92,196,180,0.25); background: var(--teal-dim);
+}
+.edu-card h3 {
+  font-family: 'Fraunces', serif; font-size: clamp(1.05rem, 2vw, 1.2rem);
+  font-weight: 300; color: var(--white); line-height: 1.25; margin-bottom: 0.35rem;
+}
+.edu-school { font-size: 0.78rem; color: var(--gold); margin-bottom: 0.85rem; }
+
+/* ════════════ PRINT (clean one-page CV) ════════════ */
+@media print {
+  #cursor-dot, #cursor-ring, #progress-bar, #nav, .mobile-overlay,
+  .hero-scroll-ind, .hb-noise, .hb-grid, .hb-glow, .ft-top, #contactForm,
+  .ct-right, .skip-nav, .hero-btns { display: none !important; }
+
+  * { box-shadow: none !important; text-shadow: none !important; }
+  html, body { background: #fff !important; color: #111 !important; cursor: auto !important; }
+  .sec, .sec-alt, #hero { background: #fff !important; padding: 1.25rem 0 !important; min-height: 0 !important; }
+  .hero-wrap { padding-top: 1rem !important; }
+
+  .hn-line, .sec-title, .xp-role, .edu-card h3, .pj-info h3, .ft-name { color: #111 !important; }
+  .hn-em, .sec-num, .xp-co, .edu-school, .pj-cat, .gold-glow { color: #7a5c22 !important; }
+  .hero-sub, .about-copy p, .xp-ul li, .edu-d, .ct-lead, .pj-info p { color: #333 !important; }
+  .text-2, .am-label, .edu-s, .skb-head span:last-child, .ft-copy { color: #666 !important; }
+
+  .hcard, .strengths, .str, .am-item, .xp-tags span, .pj, .pj-grid, .edu-card,
+  .hero-pills span, .lang, .ctl { border-color: #ccc !important; background: #fafafa !important; }
+  .xp-vline, .sec-rule, .skb-track { background: #ddd !important; }
+  .xp-node { border-color: #999 !important; background: #fff !important; }
+
+  a { color: #111 !important; text-decoration: underline; }
+  .xp, .edu-card, .pj { break-inside: avoid; }
+  .sec { break-before: auto; }
+  footer { border-color: #ccc !important; }
+}
+
+@media (max-width: 768px) {
+  .edu-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+}
+
 /* ════════════ PROJECTS ════════════ */
 .pj-grid {
   display: grid; grid-template-columns: 1fr 1.5fr 1fr;
