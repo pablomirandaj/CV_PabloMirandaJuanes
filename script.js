@@ -297,6 +297,20 @@ function showToast(msg, type = 'ok') {
 }
 
 /* ════════════════════════════════════════════════════════════
+   HERO PHOTO SPOTLIGHT — cursor-tracked glow (desktop only)
+   ════════════════════════════════════════════════════════════ */
+(function initSpotlight() {
+  const zone = qs('.hero-right');
+  if (!zone || window.innerWidth <= 768) return;
+
+  zone.addEventListener('mousemove', e => {
+    const r = zone.getBoundingClientRect();
+    zone.style.setProperty('--sx', `${((e.clientX - r.left) / r.width) * 100}%`);
+    zone.style.setProperty('--sy', `${((e.clientY - r.top) / r.height) * 100}%`);
+  }, { passive: true });
+})();
+
+/* ════════════════════════════════════════════════════════════
    FOOTER YEAR
    ════════════════════════════════════════════════════════════ */
 (function initFooterYear() {

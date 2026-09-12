@@ -409,13 +409,27 @@ body {
 .hero-socials a:hover { color: var(--gold); }
 .hero-socials span { color: var(--text-3); }
 
+/* ── Profile card spotlight (glass-panel glow that follows the cursor) ── */
+.hero-right {
+  position: relative;
+  --sx: 50%; --sy: 40%;
+}
+.hero-right::before {
+  content: ''; position: absolute; inset: -60px; z-index: 0;
+  background: radial-gradient(320px circle at var(--sx) var(--sy), rgba(200,168,106,0.16), transparent 70%);
+  opacity: 0; transition: opacity 0.5s var(--easing);
+  pointer-events: none;
+}
+.hero-right:hover::before { opacity: 1; }
+@media (prefers-reduced-motion: reduce) { .hero-right::before { display: none; } }
+
 /* ── Profile card ── */
 .hcard {
   width: clamp(200px, 22vw, 232px);
   background: var(--bg-card);
   border: 1px solid var(--border);
   border-radius: var(--r-lg);
-  overflow: hidden; position: relative;
+  overflow: hidden; position: relative; z-index: 1;
   box-shadow: 0 24px 48px rgba(0,0,0,0.5), 0 0 0 1px var(--border);
   transition: box-shadow 0.35s, transform 0.35s var(--easing);
 }
@@ -441,7 +455,12 @@ body {
   display: block; transition: transform 0.5s var(--easing);
 }
 .hcard:hover .hcard-photo img { transform: scale(1.03); }
-.hcard-body { padding: 1rem; }
+.hcard-body {
+  padding: 1rem;
+  background: rgba(255,255,255,0.015);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+}
 .hcard-status {
   display: flex; align-items: center; gap: 0.5rem;
   font-size: 0.7rem; font-weight: 400; letter-spacing: 0.05em; color: var(--teal);
@@ -805,9 +824,16 @@ body {
 }
 .pj {
   background: var(--bg-card); display: flex; flex-direction: column;
-  transition: background 0.25s var(--easing);
+  transition: background 0.25s var(--easing), transform 0.3s var(--easing), box-shadow 0.3s var(--easing);
+  position: relative; z-index: 1;
 }
-.pj:hover { background: var(--bg-3); }
+.pj:hover {
+  background: var(--bg-3);
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.45);
+  z-index: 2;
+}
+@media (prefers-reduced-motion: reduce) { .pj:hover { transform: none; } }
 .pj-cover {
   height: 190px; position: relative;
   display: flex; align-items: center; justify-content: center; overflow: hidden;
